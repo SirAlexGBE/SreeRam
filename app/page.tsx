@@ -21,7 +21,7 @@ export default function Home() {
       <About />
       <Stats />
       <Portfolio />
-      <Team />
+      {/* <Team /> */}
       <JobBoard />
       <Contact />
       <Link
