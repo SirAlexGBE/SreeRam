@@ -46,6 +46,27 @@ export default function Services() {
         setServices(nonFeaturedServices);
       } catch (error) {
         console.error("Error fetching services:", error);
+        // Fallback data for demonstration
+        setServices([
+          {
+            icon: "Code",
+            title: "Web Development",
+            description: "Build modern, responsive websites and web applications tailored to your business needs.",
+            is_featured: false,
+          },
+          {
+            icon: "Smartphone",
+            title: "Mobile App Development",
+            description: "Create high-performance mobile apps for iOS and Android platforms.",
+            is_featured: false,
+          },
+          {
+            icon: "Cloud",
+            title: "Cloud Solutions",
+            description: "Leverage scalable cloud infrastructure and services for your digital transformation.",
+            is_featured: false,
+          },
+        ]);
       }
     };
 
@@ -83,12 +104,22 @@ export default function Services() {
             const Icon = iconMap[service.icon] || Code; // Default to Code if icon not found
             return (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="group hover:bg-green-100 transition-colors duration-300 hover:shadow-lg border-border/50 bg-card/50 backdrop-blur-sm">
-                  <CardHeader>
-                    <Icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
+                <Card className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg">
+                  {/* Animated background overlay */}
+                  <span
+                    className="pointer-events-none absolute inset-0 z-0 bg-white transition-all duration-500 ease-out origin-top scale-y-0 group-hover:scale-y-100 group-hover:opacity-100 opacity-0 mix-blend-difference"
+                    style={{transitionProperty: "transform, background-color, opacity"}}
+                  />
+                  {/* Content above overlay, now with invert on hover */}
+                  <span className="relative z-10 block group-hover:invert transition duration-500">
+                    <CardHeader>
+                      <Icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                      <CardDescription className="text-gray-700 dark:text-gray-300 group-hover:text-black group-hover:dark:text-white transition-colors duration-500">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </span>
                 </Card>
               </motion.div>
             );
