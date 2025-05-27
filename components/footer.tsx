@@ -172,26 +172,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Custom Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Cybersecurity
-                </Link>
-              </li>
+              <li className="text-muted-foreground hover:text-foreground">Custom Development</li>
+              <li className="text-muted-foreground hover:text-foreground">Cloud Solutions</li>
+              <li className="text-muted-foreground hover:text-foreground">Data Analytics</li>
+              <li className="text-muted-foreground hover:text-foreground">Cybersecurity</li>
             </ul>
           </div>
 
