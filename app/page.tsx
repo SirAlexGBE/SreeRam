@@ -13,6 +13,7 @@ import JobBoard from "@/components/job";
 import {FaWhatsapp} from "react-icons/fa";
 import Link from "next/link";
 import FAQ from "@/components/FAQ";
+import Clients from "@/components/Clients";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <Stats />
       <Portfolio />
+      <Clients />
       {/* <Team /> */}
       <JobBoard />
       <Contact />
