@@ -14,6 +14,7 @@ import {FaWhatsapp} from "react-icons/fa";
 import Link from "next/link";
 import FAQ from "@/components/FAQ";
 import Clients from "@/components/Clients";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Stats />
       <Portfolio />
       <Clients />
+      <Testimonials />
       {/* <Team /> */}
       <JobBoard />
       <Contact />
