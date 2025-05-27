@@ -101,21 +101,29 @@ export default function Services() {
 
         <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const Icon = iconMap[service.icon] || Code; // Default to Code if icon not found
+            const Icon = iconMap[service.icon] || Code;
             return (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-shadow duration-300 hover:shadow-lg">
-                  {/* Animated background overlay */}
+                <Card className="group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm">
+                  {/* Optimized overlay with GPU acceleration */}
                   <span
-                    className="pointer-events-none absolute inset-0 z-0 bg-white transition-all duration-500 ease-out origin-top scale-y-0 group-hover:scale-y-100 group-hover:opacity-100 opacity-0 mix-blend-difference"
-                    style={{transitionProperty: "transform, background-color, opacity"}}
+                    className="pointer-events-none absolute inset-0 z-0 bg-white origin-top scale-y-0 
+                       transition-transform duration-300 ease-linear group-hover:scale-y-100 
+                       transform-gpu mix-blend-difference"
                   />
-                  {/* Content above overlay, now with invert on hover */}
-                  <span className="relative z-10 block group-hover:invert transition duration-500">
+
+                  {/* Content with optimized transitions */}
+                  <span className="relative z-10 block transition-[filter] duration-300 group-hover:invert">
                     <CardHeader>
-                      <Icon className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <Icon
+                        className="h-12 w-12 text-primary mb-4 transition-transform duration-300 
+                              group-hover:scale-110"
+                      />
                       <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                      <CardDescription className="text-gray-700 dark:text-gray-300 group-hover:text-black group-hover:dark:text-white transition-colors duration-500">
+                      <CardDescription
+                        className="text-gray-700 dark:text-gray-300 
+                                         transition-colors duration-300"
+                      >
                         {service.description}
                       </CardDescription>
                     </CardHeader>
