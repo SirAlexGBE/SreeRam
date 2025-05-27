@@ -13,7 +13,7 @@ const ICONS_MAP: Record<string, any> = {
 };
 
 export default function Stats() {
-  const [stats, setStats] = useState<{id: number; Icon: string; value: string; label: string}[]>([]);
+  const [stats, setStats] = useState<{id: number; icon: string; value: string; label: string}[]>([]);
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -38,8 +38,9 @@ export default function Stats() {
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <motion.div ref={ref} initial={{opacity: 0, y: 20}} animate={inView ? {opacity: 1, y: 0} : {}} transition={{duration: 0.6}} className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map(({id, Icon, value, label}, index) => {
-            const IconComponent = ICONS_MAP[Icon] || Users; // Default to Users icon if unknown
+          {stats.map(({id, icon, value, label}, index) => {
+            const IconComponent = ICONS_MAP[icon] || Users;
+
             return (
               <motion.div key={id} initial={{opacity: 0, y: 20}} animate={inView ? {opacity: 1, y: 0} : {}} transition={{duration: 0.6, delay: index * 0.1}} className="text-center">
                 <div className="flex justify-center mb-4">
