@@ -92,7 +92,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
                 <p className="text-muted-foreground">
-                  Bharatpur, Chitwan
+                  Bharatpur-12 , Chitwan
                   <br />
                   Nepal - 44200
                 </p>
