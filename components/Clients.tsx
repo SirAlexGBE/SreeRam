@@ -39,19 +39,19 @@ export default function Clients() {
         {
           id: 2,
           name: "ismt college",
-          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          logo: "https://i0.wp.com/astranix.com/wp-content/uploads/2023/03/astranix-official-logo.png?fit=300%2C57&ssl=1",
           alt: "ISMT College logo",
         },
         {
           id: 3,
           name: "ismt college",
-          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          logo: "https://cmc.edu.np/images/logo.png",
           alt: "ISMT College logo",
         },
         {
           id: 2,
           name: "ismt college",
-          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          logo: "https://hotelcgr.com.np/wp-content/uploads/2022/08/cropped-CGR_LOGO-1-1.png",
           alt: "ISMT College logo",
         },
         {
