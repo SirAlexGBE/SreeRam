@@ -36,6 +36,36 @@ export default function Clients() {
           logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
           alt: "ISMT College logo",
         },
+        {
+          id: 2,
+          name: "ismt college",
+          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          alt: "ISMT College logo",
+        },
+        {
+          id: 3,
+          name: "ismt college",
+          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          alt: "ISMT College logo",
+        },
+        {
+          id: 2,
+          name: "ismt college",
+          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          alt: "ISMT College logo",
+        },
+        {
+          id: 3,
+          name: "ismt college",
+          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          alt: "ISMT College logo",
+        },
+        {
+          id: 3,
+          name: "ismt college",
+          logo: "https://ismt.edu.np/Frontend/assets/images/logos/logo-sunderland.png",
+          alt: "ISMT College logo",
+        },
       ]);
     };
 
