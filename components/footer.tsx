@@ -135,8 +135,8 @@ function LegalModal({open, onClose, content}: {open: boolean; onClose: () => voi
   if (!open) return null;
   const legal = legalContents[content];
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-background rounded-lg shadow-lg p-6 max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
+      <div className="bg-background rounded-lg shadow-lg p-6 max-w-lg w-full relative max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button className="absolute top-2 right-2 text-xl" onClick={onClose} aria-label="Close">
           &times;
         </button>
@@ -225,17 +225,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <button className="text-muted-foreground hover:text-foreground underline" onClick={() => handleLegalClick("Privacy Policy")} type="button">
+                <button className="text-muted-foreground hover:text-foreground" onClick={() => handleLegalClick("Privacy Policy")} type="button">
                   Privacy Policy
                 </button>
               </li>
               <li>
-                <button className="text-muted-foreground hover:text-foreground underline" onClick={() => handleLegalClick("Terms of Service")} type="button">
+                <button className="text-muted-foreground hover:text-foreground" onClick={() => handleLegalClick("Terms of Service")} type="button">
                   Terms of Service
                 </button>
               </li>
               <li>
-                <button className="text-muted-foreground hover:text-foreground underline" onClick={() => handleLegalClick("Cookie Policy")} type="button">
+                <button className="text-muted-foreground hover:text-foreground" onClick={() => handleLegalClick("Cookie Policy")} type="button">
                   Cookie Policy
                 </button>
               </li>
