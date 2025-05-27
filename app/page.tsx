@@ -12,7 +12,7 @@ import Team from "@/components/team";
 import JobBoard from "@/components/job";
 import {FaWhatsapp} from "react-icons/fa";
 import Link from "next/link";
-import FAQ from "@/components/Faq";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (

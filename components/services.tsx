@@ -57,7 +57,7 @@ export default function Services() {
           {
             icon: "Smartphone",
             title: "Mobile App Development",
-            description: "Create high-performance mobile apps for iOS and Android platforms.",
+            description: "Create high-performance mobile apps for iOS and Android platforms. We Create to fulfill your all needs",
             is_featured: false,
           },
           {
