@@ -32,7 +32,7 @@ export default function Testimonials() {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/testimonials`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/testimonials`);
         const data = await response.json();
         setTestimonials(data); // Expecting an array of testimonial objects
       } catch (error) {
