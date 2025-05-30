@@ -85,6 +85,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-lg font-semibold mb-1">Call Us</h3>
                 <p className="text-muted-foreground">+977 9765656186</p>
+                <p className="text-muted-foreground">+977 9865419130</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">

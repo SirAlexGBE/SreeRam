@@ -38,13 +38,7 @@ export default function FAQ() {
               "We offer a comprehensive range of digital services including web development, mobile app development, UI/UX design, and digital marketing solutions tailored to your business needs.",
             category: "Services",
           },
-          {
-            id: 2,
-            question: "How long does a typical project take?",
-            answer:
-              "Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while complex applications can take 3-6 months. We provide detailed timelines during our initial consultation.",
-            category: "Timeline",
-          },
+
           {
             id: 3,
             question: "Do you provide ongoing support?",
